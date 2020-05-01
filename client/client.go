@@ -2,26 +2,26 @@ package client
 
 import (
 	"context"
-	"github.com/treeforest/rpc/codec"
+	"fmt"
 	"github.com/treeforest/rpc"
+	"github.com/treeforest/rpc/codec"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"strings"
-	"io/ioutil"
-	"fmt"
 )
 
 type client struct {
 	cc codec.Codec
 }
 
-func NewClient(cc codec.Codec) rpc.Client{
+func NewClient(cc codec.Codec) rpc.Client {
 	c := new(client)
 	c.cc = cc
 	return c
 }
 
-func (c *client) CallByObj(ctx context.Context, sname, name string, in, out interface{}) error{
+func (c *client) CallByObj(ctx context.Context, sname, name string, in, out interface{}) error {
 	buf, err := c.Call(ctx, sname, name, in)
 
 	pout, ok := out.(*[]byte)
@@ -39,7 +39,7 @@ func (c *client) CallByObj(ctx context.Context, sname, name string, in, out inte
 	return err
 }
 
-func (c *client) Call(ctx context.Context, sname, name string, in interface{})(rbuf []byte, err error) {
+func (c *client) Call(ctx context.Context, sname, name string, in interface{}) (rbuf []byte, err error) {
 	buf, ok := in.([]byte)
 	if !ok {
 		str, ok := in.(string)

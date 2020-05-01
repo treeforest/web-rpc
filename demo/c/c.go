@@ -1,9 +1,9 @@
 package main
 
 import (
+	"context"
 	"github.com/treeforest/rpc/client"
 	"github.com/treeforest/rpc/codec/jsoncodec"
-	"context"
 	"log"
 )
 

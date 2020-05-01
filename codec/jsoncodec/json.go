@@ -6,14 +6,13 @@ import (
 )
 
 type jsonCodec struct {
-
 }
 
 func NewCodec() codec.Codec {
 	return &jsonCodec{}
 }
 
-func (p *jsonCodec) Marshal(v interface{})([]byte, error) {
+func (p *jsonCodec) Marshal(v interface{}) ([]byte, error) {
 	return json.Marshal(v)
 }
 

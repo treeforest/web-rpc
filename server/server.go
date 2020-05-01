@@ -4,13 +4,13 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/treeforest/rpc"
 	"io"
 	"log"
 	"net/http"
 	"net/url"
 	"reflect"
 	"sync"
-	"github.com/treeforest/rpc"
 )
 
 type server struct {
@@ -112,7 +112,7 @@ func (s *server) handle(w http.ResponseWriter, req *http.Request) {
 		{
 
 		}
-	default:// json codec
+	default: // json codec
 		{
 			req.ParseForm()
 			values := req.PostForm
