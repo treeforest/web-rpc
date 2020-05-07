@@ -16,8 +16,8 @@ type methodType struct {
 
 type service struct {
 	sync.Mutex
-	rcvr   reflect.Value          // receiver of methods for the service
-	typ    reflect.Type           // type of the receiver
+	rcvr   reflect.Value          // receiver.go of methods for the service
+	typ    reflect.Type           // type of the receiver.go
 	method map[string]*methodType // registered methods
 	obj    interface{}
 }

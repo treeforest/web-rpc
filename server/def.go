@@ -50,7 +50,7 @@ func suitableMethods(typ reflect.Type) map[string]*methodType {
 			continue
 		}
 
-		// Method needs three input parameters ins: receiver, context.Context, *args.
+		// Method needs three input parameters ins: receiver.go, context.Context, *args.
 		if mtype.NumIn() != 3 {
 			log.Printf("method %s has wong number of ins: %v \n", mname, mtype.NumIn())
 			continue
