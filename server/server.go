@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/treeforest/rpc"
+	"github.com/treeforest/web-rpc"
 	"io"
 	"log"
 	"net/http"

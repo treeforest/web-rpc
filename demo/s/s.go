@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"github.com/treeforest/rpc/server"
+	"github.com/treeforest/web-rpc/server"
 	"log"
 )
 

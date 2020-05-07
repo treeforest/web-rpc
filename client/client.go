@@ -3,8 +3,8 @@ package client
 import (
 	"context"
 	"fmt"
-	"github.com/treeforest/rpc"
-	"github.com/treeforest/rpc/codec"
+	"github.com/treeforest/web-rpc"
+	"github.com/treeforest/web-rpc/codec"
 	"io/ioutil"
 	"log"
 	"net/http"

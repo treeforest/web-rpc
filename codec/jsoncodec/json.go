@@ -2,7 +2,7 @@ package jsoncodec
 
 import (
 	"encoding/json"
-	"github.com/treeforest/rpc/codec"
+	"github.com/treeforest/web-rpc/codec"
 )
 
 type jsonCodec struct {
